@@ -22,4 +22,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- the test project was accidentally referenced here – remove it -->
+    <!--
+    <ProjectReference Include="backend.Tests\backend.Tests.csproj" />
+    -->
+  </ItemGroup>
+
 </Project>
