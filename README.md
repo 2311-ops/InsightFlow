@@ -103,9 +103,9 @@ InsightFlow/
 
 | Phase | Focus | Status |
 |-------|-------|--------|
-| 1 | Foundation & Setup | 🔄 In Progress |
-| 2 | Backend & Database | ⏳ Upcoming |
-| 3 | AI Engine | ⏳ Upcoming |
+| 1 | Foundation & Setup | Done |
+| 2 | Backend & Database | Done |
+| 3 | AI Engine | Done |
 | 4 | Frontend Dashboard | ⏳ Upcoming |
 | 5 | Integration & Testing | ⏳ Upcoming |
 | 6 | Docker & Deployment | ⏳ Upcoming |
