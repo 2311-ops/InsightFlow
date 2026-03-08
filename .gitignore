@@ -1,0 +1,35 @@
+# ── Backend (ASP.NET Core) ──────────────────────────────
+backend/bin/
+backend/obj/
+backend/*.user
+backend/.vs/
+backend/appsettings.Development.json
+
+# ── Frontend (React) ────────────────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ── AI Engine (Python) ──────────────────────────────────
+ai_engine/__pycache__/
+ai_engine/*.pyc
+ai_engine/.venv/
+ai_engine/venv/
+ai_engine/*.egg-info/
+ai_engine/.pytest_cache/
+ai_engine/models/          # large LLM model files
+
+# ── Database ────────────────────────────────────────────
+*.sql.bak
+
+# ── General ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.env
+*.log

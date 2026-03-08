@@ -1,0 +1,48 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: insightflow-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: insightflow
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build: ./backend
+    container_name: insightflow-backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Database=insightflow;Username=postgres;Password=secret
+    depends_on:
+      - postgres
+
+  ai_engine:
+    build: ./ai_engine
+    container_name: insightflow-ai
+    restart: always
+    ports:
+      - "5001:5001"
+    depends_on:
+      - postgres
+
+  frontend:
+    build: ./frontend
+    container_name: insightflow-frontend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:
